@@ -1,0 +1,137 @@
+=====================================
+           FHS
+=====================================
+  Linux File Hierarchy Structure
+=====================================
+
+
+1-  /       ==> It is parent Directory of linux Operating System which contains number of sub directory 
+                to manage the OS.
+
+2-  /root   ==> It is home directory of super user or it's a root's home directory
+
+3-  /home   ==> It is a bydefault home directory for all normal users. /home/sachin  /home/deepak  /home/soniya
+
+            ==>  /etc/default/useradd  ==> HOME=/home  
+
+4-  /etc    ==>  It's contains all configuration Files.  # cat /etc/passwd # cat  /etc/crontab  # cat  /etc/group 
+
+
+                     Example:-  NFS  SAMBA  FTP  Apache   NTP crontab DNS SSH ...so on 
+
+5-  /var    ==> variables ==> It Contains all variable types of Records Ex- Log Files
+
+             # tail -f  /var/log/secure     # tail -f  /var/log/cron   # tail -f /var/log/messages 
+
+5-  /dev    ==> it contains all devices Related information.  # fdisk -l  # lsblk    /dev/sda  /dev/sdb  /dev/sda1 /dev/sr0
+
+6-  /boot   ==> It contains all OS booting Related Files. For Example:- Kernel, Bootloader (GRUB2) and other files as well
+
+6-  /media  ==> OR /run/media/username/devicename ==> It is a default mounting point for all USB based Devices.
+
+7-  /mnt    ==> default directory to mount any physical Disk , USB Drive as well and other Network based Drives as well.
+
+8-  /proc   ==> it contains all process and system information related files.
+
+9-  /bin    ==> It contains normal binary or commands OR Regular Commands.
+
+10- /sbin   ==> It contains Super Binary or commands.
+
+11- /usr    ==> It contains all binary and user programs and application related files. 
+
+12- /lib  or /lib64  ==> It contains all library Files   ==>  /usr/lib  and   /usr/lib64  
+
+13- /sys    ==> It contains all system hardware related information files.
+ 
+14- /srv    ==> use to provide data for any services. Example- Apache OR FTP ==> /srv 
+
+15- /tmp    ==> It contains Temorary Files.
+
+16- /opt    ==> Optional Place to install any addon third party application.
+
+============================================================================================
+Windows  => How we can delete cache files.
+Linux    => "    "   "    "   "  "    "  .   ?
+
+/tmp        ==> Interval Time ==> automatically delete ? 
+
+/var/tmp    ==> Internal Time ==> "    "     "     "   ?
+
+============================================================================================
+
+
+Basic Examples
+
+
+
+[root@localhost ~]# history 
+    1  clear 
+    2  ls
+    3  pwd
+    4  ls  /
+    5  du -sh  /usr 
+    6  df  -h
+    7  cat  /etc/default/useradd 
+    8  mkdir  /test 
+    9  vim    /etc/default/useradd 
+   10  useradd deepak  
+   11  ls  /home 
+   12  ls  /test 
+   13  su - deepak  
+   14  grep  krishna  /etc/passwd
+   15  grep deepak   /etc/passwd
+   16  vim /etc/default/useradd 
+   17  usermod   -d  -m   /home/deepak   deepak  
+   18  usermod    -m  -d    /home/deepak   deepak  
+   19  ls  /home
+   20  lsblk  
+   21  ls  /dev/sda1 
+   22  ls  /boot  
+   23  reboot 
+   24  ifconfig 
+   25  ping 127.0.0.1
+   26  ls /proc
+   27  pstree 
+   28  pidof init 
+   29  pidof crond 
+   30  pidof chronyd  
+   31  pidof ping  
+   32  pidof systemd 
+   33  ps -aux 
+   34  ps -aux  |  grep systemd  
+   35  which crond  
+   36  which chronyd 
+   37  systemctl is-active chronyd
+   38  systemctl is-active crond 
+   39  which sshd 
+   40  ls /usr/sbin
+   41  ls /usr/bin
+   42  ls  /
+   43  ls -ld  /bin  
+   44  ls -ld  /sbin  
+   45  ls -ld  /lib   
+   46  ls -ld  /lib64
+   47  ls  /bin  | wc -l  
+   48  ls  /usr/bin  | wc -l  
+   49  ls  /sbin  | wc -l  
+   50  ls  /usr/sbin  | wc -l  
+   51  expr 1475 + 594
+   52  rpm -qa | wc -l 
+   53  fdisk -l  /dev/sda
+   54  ls  /sys
+   55  ls  /sys/block
+   56   
+   57  ls  /etc/udev
+   58  ls  /
+   59  ls /srv
+   60   s/
+   61  ls /
+   62  ls  /usr
+   63  which useradd
+   64  whereis  useradd
+   65  man useradd  
+   66  man userdel  
+   67  ls /
+
+
+===================================
